@@ -1,0 +1,101 @@
+[
+  {
+    "id": "FW01",
+    "name": "Flat White",
+    "category": "Coffee",
+    "price_pence": 340,
+    "aliases": [
+      "flat wht"
+    ]
+  },
+  {
+    "id": "LT01",
+    "name": "Latte",
+    "category": "Coffee",
+    "price_pence": 350,
+    "aliases": [
+      "caffe latte"
+    ]
+  },
+  {
+    "id": "CP01",
+    "name": "Cappuccino",
+    "category": "Coffee",
+    "price_pence": 350,
+    "aliases": [
+      "cappucino"
+    ]
+  },
+  {
+    "id": "AM01",
+    "name": "Americano",
+    "category": "Coffee",
+    "price_pence": 300,
+    "aliases": []
+  },
+  {
+    "id": "ES01",
+    "name": "Espresso",
+    "category": "Coffee",
+    "price_pence": 240,
+    "aliases": []
+  },
+  {
+    "id": "TE01",
+    "name": "Breakfast Tea",
+    "category": "Tea",
+    "price_pence": 220,
+    "aliases": [
+      "tea",
+      "english breakfast"
+    ]
+  },
+  {
+    "id": "HC01",
+    "name": "Hot Chocolate",
+    "category": "Other Drinks",
+    "price_pence": 320,
+    "aliases": [
+      "hot choc"
+    ]
+  },
+  {
+    "id": "CR01",
+    "name": "Croissant",
+    "category": "Bakery",
+    "price_pence": 260,
+    "aliases": []
+  },
+  {
+    "id": "PC01",
+    "name": "Pain au Chocolat",
+    "category": "Bakery",
+    "price_pence": 280,
+    "aliases": [
+      "pain au choc"
+    ]
+  },
+  {
+    "id": "CB01",
+    "name": "Cinnamon Bun",
+    "category": "Bakery",
+    "price_pence": 310,
+    "aliases": []
+  },
+  {
+    "id": "BR01",
+    "name": "Bacon Roll",
+    "category": "Food",
+    "price_pence": 450,
+    "aliases": [
+      "bacon butty"
+    ]
+  },
+  {
+    "id": "BB01",
+    "name": "Banana Bread",
+    "category": "Bakery",
+    "price_pence": 290,
+    "aliases": []
+  }
+]

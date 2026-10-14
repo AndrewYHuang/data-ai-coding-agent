@@ -1,0 +1,13 @@
+# uv / Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# Pipeline output (regenerate with `uv run python -m kettle <date>`)
+output/
+*.db
+
+# Personal Claude Code settings
+.claude/settings.local.json

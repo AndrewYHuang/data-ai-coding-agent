@@ -1,0 +1,120 @@
+{"transaction_id": "EDI-0916-0001", "timestamp": "2026-09-16T07:05:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0002", "timestamp": "2026-09-16T07:18:00", "till": "T1", "items": [{"sku": "LT01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0003", "timestamp": "2026-09-16T08:00:00", "till": "T2", "items": [{"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0004", "timestamp": "2026-09-16T08:01:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0005", "timestamp": "2026-09-16T08:02:00", "till": "T2", "items": [{"sku": "FW01", "qty": 2, "price_pence": 340}, {"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0006", "timestamp": "2026-09-16T08:04:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0007", "timestamp": "2026-09-16T08:05:00", "till": "T1", "items": [{"sku": "BR01", "qty": 1, "price_pence": 450}, {"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0008", "timestamp": "2026-09-16T08:05:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0009", "timestamp": "2026-09-16T08:05:00", "till": "T1", "items": [{"sku": "CR01", "qty": 2, "price_pence": 260}, {"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "FW01", "qty": 2, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0010", "timestamp": "2026-09-16T08:12:00", "till": "T1", "items": [{"sku": "TE01", "qty": 2, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0011", "timestamp": "2026-09-16T08:14:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0012", "timestamp": "2026-09-16T08:19:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0013", "timestamp": "2026-09-16T08:20:00", "till": "T2", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}, {"sku": "HC01", "qty": 1, "price_pence": 320}, {"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0014", "timestamp": "2026-09-16T08:20:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0015", "timestamp": "2026-09-16T08:22:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "CB01", "qty": 2, "price_pence": 310}]}
+{"transaction_id": "EDI-0916-0016", "timestamp": "2026-09-16T08:23:00", "till": "T1", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0017", "timestamp": "2026-09-16T08:24:00", "till": "T1", "items": [{"sku": "LT01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0018", "timestamp": "2026-09-16T08:29:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0019", "timestamp": "2026-09-16T08:39:00", "till": "T2", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0020", "timestamp": "2026-09-16T08:39:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}, {"sku": "BB01", "qty": 3, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0021", "timestamp": "2026-09-16T08:44:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0022", "timestamp": "2026-09-16T08:45:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0023", "timestamp": "2026-09-16T08:47:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0024", "timestamp": "2026-09-16T08:48:00", "till": "T2", "items": [{"sku": "TE01", "qty": -1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0025", "timestamp": "2026-09-16T08:49:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "HC01", "qty": 2, "price_pence": 320}]}
+{"transaction_id": "EDI-0916-0026", "timestamp": "2026-09-16T08:50:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0027", "timestamp": "2026-09-16T08:53:00", "till": "T1", "items": [{"sku": "LT01", "qty": -1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0028", "timestamp": "2026-09-16T08:54:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}]}
+{"transaction_id": "EDI-0916-0029", "timestamp": "2026-09-16T08:54:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}]}
+{"transaction_id": "EDI-0916-0030", "timestamp": "2026-09-16T08:58:00", "till": "T2", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0031", "timestamp": "2026-09-16T08:58:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0032", "timestamp": "2026-09-16T09:01:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0033", "timestamp": "2026-09-16T09:02:00", "till": "T1", "items": [{"sku": "CB01", "qty": 2, "price_pence": 310}, {"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "PC01", "qty": 1, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0034", "timestamp": "2026-09-16T09:02:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0035", "timestamp": "2026-09-16T09:03:00", "till": "T2", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0036", "timestamp": "2026-09-16T09:03:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}, {"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0037", "timestamp": "2026-09-16T09:05:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0038", "timestamp": "2026-09-16T09:06:00", "till": "T2", "items": [{"sku": "LT01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0039", "timestamp": "2026-09-16T09:06:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0040", "timestamp": "2026-09-16T09:08:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "BR01", "qty": 2, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0041", "timestamp": "2026-09-16T09:08:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0042", "timestamp": "2026-09-16T09:08:00", "till": "T1", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "PC01", "qty": 3, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0043", "timestamp": "2026-09-16T09:11:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}]}
+{"transaction_id": "EDI-0916-0044", "timestamp": "2026-09-16T09:11:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0045", "timestamp": "2026-09-16T09:14:00", "till": "T2", "items": [{"sku": "LT01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0046", "timestamp": "2026-09-16T09:23:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "PC01", "qty": 1, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0047", "timestamp": "2026-09-16T09:27:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0048", "timestamp": "2026-09-16T09:28:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0049", "timestamp": "2026-09-16T09:30:00", "till": "T1", "items": [{"sku": "ES01", "qty": -1, "price_pence": 240}]}
+{"transaction_id": "EDI-0916-0050", "timestamp": "2026-09-16T09:53:00", "till": "T2", "items": [{"sku": "BB01", "qty": 1, "price_pence": 290}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0051", "timestamp": "2026-09-16T09:56:00", "till": "T2", "items": [{"sku": "PC01", "qty": 2, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0052", "timestamp": "2026-09-16T10:01:00", "till": "T1", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0053", "timestamp": "2026-09-16T10:15:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0054", "timestamp": "2026-09-16T11:12:00", "till": "T1", "items": [{"sku": "HC01", "qty": 1, "price_pence": 320}]}
+{"transaction_id": "EDI-0916-0055", "timestamp": "2026-09-16T11:26:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0056", "timestamp": "2026-09-16T11:39:00", "till": "T1", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0057", "timestamp": "2026-09-16T11:41:00", "till": "T2", "items": [{"sku": "BR01", "qty": 1, "price_pence": 450}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0058", "timestamp": "2026-09-16T11:42:00", "till": "T1", "items": [{"sku": "TE01", "qty": -1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0059", "timestamp": "2026-09-16T11:44:00", "till": "T2", "items": [{"sku": "CR01", "qty": 2, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0060", "timestamp": "2026-09-16T12:01:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0061", "timestamp": "2026-09-16T12:04:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0062", "timestamp": "2026-09-16T12:04:00", "till": "T2", "items": [{"sku": "FW01", "qty": 2, "price_pence": 340}, {"sku": "AM01", "qty": 2, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0063", "timestamp": "2026-09-16T12:11:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}, {"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0064", "timestamp": "2026-09-16T12:12:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "HC01", "qty": 1, "price_pence": 320}, {"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0065", "timestamp": "2026-09-16T12:19:00", "till": "T2", "items": [{"sku": "FW01", "qty": 2, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0066", "timestamp": "2026-09-16T12:20:00", "till": "T2", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0067", "timestamp": "2026-09-16T12:21:00", "till": "T2", "items": [{"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0068", "timestamp": "2026-09-16T12:26:00", "till": "T1", "items": [{"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0069", "timestamp": "2026-09-16T12:26:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0070", "timestamp": "2026-09-16T12:27:00", "till": "T1", "items": [{"sku": "CB01", "qty": 1, "price_pence": 310}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0071", "timestamp": "2026-09-16T12:29:00", "till": "T2", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "PC01", "qty": 1, "price_pence": 280}]}
+{"transaction_id": "EDI-0916-0072", "timestamp": "2026-09-16T12:31:00", "till": "T2", "items": [{"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0073", "timestamp": "2026-09-16T12:31:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0074", "timestamp": "2026-09-16T12:33:00", "till": "T2", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}, {"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0075", "timestamp": "2026-09-16T12:42:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0076", "timestamp": "2026-09-16T12:44:00", "till": "T2", "items": [{"sku": "CB01", "qty": 1, "price_pence": 310}]}
+{"transaction_id": "EDI-0916-0077", "timestamp": "2026-09-16T12:44:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0078", "timestamp": "2026-09-16T12:45:00", "till": "T1", "items": [{"sku": "CP01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0079", "timestamp": "2026-09-16T12:47:00", "till": "T1", "items": [{"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0080", "timestamp": "2026-09-16T12:48:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0081", "timestamp": "2026-09-16T12:48:00", "till": "T2", "items": [{"sku": "HC01", "qty": 1, "price_pence": 320}, {"sku": "FW01", "qty": 3, "price_pence": 340}, {"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0082", "timestamp": "2026-09-16T12:50:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "CR01", "qty": 2, "price_pence": 260}, {"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0083", "timestamp": "2026-09-16T12:50:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0084", "timestamp": "2026-09-16T12:50:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0085", "timestamp": "2026-09-16T12:52:00", "till": "T1", "items": [{"sku": "BB01", "qty": 1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0086", "timestamp": "2026-09-16T12:56:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0087", "timestamp": "2026-09-16T12:57:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0088", "timestamp": "2026-09-16T13:02:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "CP01", "qty": 1, "price_pence": 350}, {"sku": "LT01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0089", "timestamp": "2026-09-16T13:03:00", "till": "T2", "items": [{"sku": "BB01", "qty": -1, "price_pence": 290}]}
+{"transaction_id": "EDI-0916-0090", "timestamp": "2026-09-16T13:04:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0091", "timestamp": "2026-09-16T13:05:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0092", "timestamp": "2026-09-16T13:06:00", "till": "T1", "items": [{"sku": "CB01", "qty": 1, "price_pence": 310}, {"sku": "HC01", "qty": 1, "price_pence": 320}]}
+{"transaction_id": "EDI-0916-0093", "timestamp": "2026-09-16T13:08:00", "till": "T2", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0094", "timestamp": "2026-09-16T13:09:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0095", "timestamp": "2026-09-16T13:11:00", "till": "T1", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}, {"sku": "BR01", "qty": 1, "price_pence": 450}, {"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0096", "timestamp": "2026-09-16T13:14:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "HC01", "qty": 2, "price_pence": 320}, {"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0097", "timestamp": "2026-09-16T13:17:00", "till": "T2", "items": [{"sku": "LT01", "qty": -1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0098", "timestamp": "2026-09-16T13:17:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0099", "timestamp": "2026-09-16T13:20:00", "till": "T2", "items": [{"sku": "CP01", "qty": 2, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0100", "timestamp": "2026-09-16T13:22:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0101", "timestamp": "2026-09-16T13:24:00", "till": "T1", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0102", "timestamp": "2026-09-16T13:25:00", "till": "T1", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}, {"sku": "BR01", "qty": 2, "price_pence": 450}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0103", "timestamp": "2026-09-16T13:28:00", "till": "T2", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}, {"sku": "TE01", "qty": 1, "price_pence": 220}, {"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0104", "timestamp": "2026-09-16T13:30:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "CP01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0105", "timestamp": "2026-09-16T13:33:00", "till": "T1", "items": [{"sku": "BR01", "qty": 1, "price_pence": 450}, {"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0106", "timestamp": "2026-09-16T13:39:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0107", "timestamp": "2026-09-16T13:58:00", "till": "T1", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}, {"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0108", "timestamp": "2026-09-16T14:04:00", "till": "T1", "items": [{"sku": "ES01", "qty": 1, "price_pence": 240}]}
+{"transaction_id": "EDI-0916-0109", "timestamp": "2026-09-16T14:19:00", "till": "T1", "items": [{"sku": "TE01", "qty": 1, "price_pence": 220}]}
+{"transaction_id": "EDI-0916-0110", "timestamp": "2026-09-16T14:30:00", "till": "T2", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0111", "timestamp": "2026-09-16T14:38:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}]}
+{"transaction_id": "EDI-0916-0112", "timestamp": "2026-09-16T14:48:00", "till": "T1", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}]}
+{"transaction_id": "EDI-0916-0113", "timestamp": "2026-09-16T14:56:00", "till": "T2", "items": [{"sku": "AM01", "qty": 1, "price_pence": 300}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0114", "timestamp": "2026-09-16T15:14:00", "till": "T2", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "LT01", "qty": 1, "price_pence": 350}, {"sku": "CB01", "qty": 1, "price_pence": 310}]}
+{"transaction_id": "EDI-0916-0115", "timestamp": "2026-09-16T15:27:00", "till": "T1", "items": [{"sku": "BR01", "qty": 1, "price_pence": 450}]}
+{"transaction_id": "EDI-0916-0116", "timestamp": "2026-09-16T15:32:00", "till": "T2", "items": [{"sku": "PC01", "qty": 1, "price_pence": 280}, {"sku": "LT01", "qty": 1, "price_pence": 350}]}
+{"transaction_id": "EDI-0916-0117", "timestamp": "2026-09-16T15:36:00", "till": "T1", "items": [{"sku": "CR01", "qty": 1, "price_pence": 260}]}
+{"transaction_id": "EDI-0916-0118", "timestamp": "2026-09-16T15:50:00", "till": "T1", "items": [{"sku": "FW01", "qty": 1, "price_pence": 340}, {"sku": "HC01", "qty": 1, "price_pence": 320}]}
+{"transaction_id": "EDI-0916-0119", "timestamp": "2026-09-16T16:05:00", "till": "T1", "items": [{"sku": "CB01", "qty": 1, "price_pence": 310}]}
+{"transaction_id": "EDI-0916-0120", "timestamp": "2026-09-16T16:47:00", "till": "T1", "items": [{"sku": "LT01", "qty": 1, "price_pence": 350}]}
