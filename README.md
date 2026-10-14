@@ -21,7 +21,8 @@ flowchart LR
 ```
 
 The pipeline was written by **Andy**, a contractor who has now left. It runs. Nobody quite
-trusts the numbers. There are no real tests and no documentation.
+trusts the numbers. There are no real tests. All the documentation there is is Andy's
+[handover note](HANDOVER.md).
 
 **You are the data engineer who has just inherited it.** Your job is to understand the
 pipeline, make it trustworthy and extend it. You'll have an AI agent as a pair programmer, but **you are accountable for
@@ -197,4 +198,5 @@ data/raw/loyalty_members.csv  customer data from marketing (personal data, handl
 data/reference/          the product catalogue
 exercises/               your instructions
 TICKETS.md               what the business wants fixed
+HANDOVER.md              Andy's handover notes
 ```

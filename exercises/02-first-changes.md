@@ -24,7 +24,8 @@ Create and switch to a new git branch called exercise-02
 
 ## 2. `format_pence`: manual mode
 
-Claude Code starts in the default (**manual**) mode, where it asks before every edit and command.
+In this repo, Claude Code starts in **manual** mode, where it asks before every edit and command.
+(That's set in `.claude/settings.json`. Elsewhere it may start in a different mode.)
 
 ```
 Implement format_pence in kettle/transform.py so that its tests in tests/test_transform.py pass.

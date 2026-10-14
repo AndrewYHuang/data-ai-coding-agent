@@ -50,11 +50,13 @@ must **never** be broken, use something that runs every time, whatever the agent
 
 ### Permissions: protect the raw data and personal data
 
-Create `.claude/settings.json`:
+The repo already has a `.claude/settings.json`, which makes Claude start in manual mode. Add a
+`deny` list to it:
 
 ```json
 {
   "permissions": {
+    "defaultMode": "manual",
     "deny": [
       "Edit(./data/raw/**)",
       "Write(./data/raw/**)",

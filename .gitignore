@@ -9,5 +9,6 @@ __pycache__/
 output/
 *.db
 
-# Personal Claude Code settings
+# Personal Claude Code settings and worktrees
 .claude/settings.local.json
+.claude/worktrees/
