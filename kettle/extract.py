@@ -10,6 +10,13 @@ def read_till_export(data_dir, branch, date):
     return rows[1:]  # skip header
 
 
+def read_jsonl_till_export(data_dir, branch, date):
+    """Read a JSON Lines till export: one transaction per line."""
+    path = os.path.join(data_dir, "raw", "tills", branch + "_" + date + ".jsonl")
+    with open(path, encoding="utf-8") as f:
+        return [json.loads(line) for line in f if line.strip()]
+
+
 def read_products(data_dir):
     path = os.path.join(data_dir, "reference", "products.json")
     with open(path) as f:

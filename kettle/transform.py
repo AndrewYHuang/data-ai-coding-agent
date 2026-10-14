@@ -54,6 +54,34 @@ def clean_rows(rows, branch, eur_rate=None):
     return cleaned
 
 
+def clean_jsonl_transactions(transactions, branch, products):
+    """Flatten JSON Lines till transactions into one sales row per item.
+
+    These tills export product SKUs, which are looked up in the catalogue.
+    Items with an unknown SKU are skipped with a warning.
+    """
+    names_by_sku = {product["id"]: product["name"] for product in products}
+    cleaned = []
+    for txn in transactions:
+        sold_at = parse_till_timestamp(txn["timestamp"])
+        for item in txn["items"]:
+            name = names_by_sku.get(item["sku"])
+            if name is None:
+                print(f"  skipping unknown SKU {item['sku']!r} in {txn['transaction_id']}")
+                continue
+            cleaned.append({
+                "transaction_id": txn["transaction_id"],
+                "branch": branch,
+                "sold_at": sold_at.isoformat(),
+                "till_id": txn["till"],
+                "product": name,
+                "quantity": item["qty"],
+                "unit_price_pence": item["price_pence"],
+                "line_total_pence": item["qty"] * item["price_pence"],
+            })
+    return cleaned
+
+
 # TODO(Andy): pull the parsing logic out of clean_rows into the helpers below so
 # it can be tested.
 
