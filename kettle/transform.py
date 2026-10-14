@@ -10,6 +10,14 @@ def clean_rows(rows, branch, eur_rate=None):
             if len(row) == 0 or row[0] == "":
                 continue
 
+            # The tills sometimes export the exact same line twice. Two
+            # different sales can share a minute and a product, so only an
+            # identical line counts as a duplicate.
+            key = tuple(row)
+            if key in seen:
+                continue
+            seen.add(key)
+
             if branch == "dublin":
                 txn_id, ts, till, product, qty, price = row[5], row[0], row[4], row[1], row[3], row[2]
             else:
@@ -20,8 +28,8 @@ def clean_rows(rows, branch, eur_rate=None):
             else:
                 sold_at = datetime.fromisoformat(ts.strip())
 
-            # some tills export negative numbers by mistake
-            qty = abs(int(qty))
+            # Negative quantities are refunds, so keep the sign
+            qty = int(qty)
 
             if branch == "manchester":
                 price_pence = int(price)
@@ -33,11 +41,6 @@ def clean_rows(rows, branch, eur_rate=None):
                 price_pence = int(round(price_pence / eur_rate))
 
             product = product.strip().title()
-
-            key = (branch, sold_at, product)
-            if key in seen:
-                continue
-            seen.add(key)
 
             cleaned.append({
                 "transaction_id": txn_id,

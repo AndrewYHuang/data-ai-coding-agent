@@ -53,21 +53,22 @@ def test_product_names_are_only_trimmed_and_title_cased():
     assert cleaned["product"] == "Flat-White"
 
 
-def test_negative_quantity_becomes_positive():
-    # BUG? see KC-102: a refund is counted as a sale
+def test_refund_keeps_its_negative_quantity():
+    # KC-102: a refund reduces the totals
     row = ["LDS-0914-0024", "14/09/2026 08:38", "T1", "Hot Chocolate", "-1", "3.20"]
     [cleaned] = clean_rows([row], "leeds")
-    assert cleaned["quantity"] == 1
+    assert cleaned["quantity"] == -1
+    assert cleaned["line_total_pence"] == -320
 
 
 def test_exact_duplicate_row_is_dropped():
     assert len(clean_rows([LEEDS_ROW, list(LEEDS_ROW)], "leeds")) == 1
 
 
-def test_same_product_same_minute_is_counted_once():
-    # BUG? see KC-102: two different transactions, but the second is dropped
+def test_different_sales_of_same_product_in_same_minute_are_both_kept():
+    # KC-102: two different transactions must both count
     other_sale = ["LDS-0914-0099", "14/09/2026 07:01", "T1", "Americano", "1", "3.00"]
-    assert len(clean_rows([LEEDS_ROW, other_sale], "leeds")) == 1
+    assert len(clean_rows([LEEDS_ROW, other_sale], "leeds")) == 2
 
 
 def test_blank_and_unparseable_rows_are_dropped_silently():
