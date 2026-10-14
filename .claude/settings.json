@@ -1,11 +1,7 @@
 {
   "permissions": {
     "defaultMode": "manual",
-    "deny": [
-      "Edit(./data/raw/**)",
-      "Write(./data/raw/**)",
-      "Read(./data/raw/loyalty_members.csv)"
-    ]
+    "deny": ["Edit(./data/raw/**)", "Read(./data/raw/loyalty_members.csv)"]
   },
   "hooks": {
     "PostToolUse": [
