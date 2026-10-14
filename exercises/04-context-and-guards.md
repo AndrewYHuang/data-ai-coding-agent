@@ -59,12 +59,14 @@ The repo already has a `.claude/settings.json`, which makes Claude start in manu
     "defaultMode": "manual",
     "deny": [
       "Edit(./data/raw/**)",
-      "Write(./data/raw/**)",
       "Read(./data/raw/loyalty_members.csv)"
     ]
   }
 }
 ```
+
+An `Edit(...)` rule covers every tool that changes files, including creating them, so you
+don't need a separate rule for writing.
 
 Start a new session and **test the guard**:
 
