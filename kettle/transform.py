@@ -52,7 +52,7 @@ def clean_rows(rows, branch, eur_rate=None):
     return cleaned
 
 
-# TODO(Dev): pull the parsing logic out of clean_rows into the helpers below so
+# TODO(Andy): pull the parsing logic out of clean_rows into the helpers below so
 # it can be tested. Haven't got round to it yet - they just raise for now.
 
 

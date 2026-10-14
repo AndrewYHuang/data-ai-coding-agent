@@ -3,7 +3,7 @@
 **Goal:** make your first code changes with an agent, use git, and feel the difference between
 the permission modes.
 
-Dev started pulling the parsing logic out of `clean_rows` into four small helper functions at
+Andy started pulling the parsing logic out of `clean_rows` into four small helper functions at
 the bottom of `kettle/transform.py`, but only got as far as the docstrings. The tests are
 already written in `tests/test_transform.py`, and they currently fail.
 

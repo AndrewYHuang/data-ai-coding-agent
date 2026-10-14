@@ -1,4 +1,4 @@
-"""Tests for the helper functions Dev never finished (exercise 02).
+"""Tests for the helper functions Andy never finished (exercise 02).
 
 These fail until the helpers in kettle/transform.py are implemented.
 Do not change these tests to make them pass - change the code.
