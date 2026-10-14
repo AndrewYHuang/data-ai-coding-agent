@@ -1,4 +1,5 @@
 from datetime import datetime
+from decimal import Decimal, InvalidOperation
 
 
 def clean_rows(rows, branch, eur_rate=None):
@@ -53,7 +54,7 @@ def clean_rows(rows, branch, eur_rate=None):
 
 
 # TODO(Andy): pull the parsing logic out of clean_rows into the helpers below so
-# it can be tested. Haven't got round to it yet - they just raise for now.
+# it can be tested.
 
 
 def format_pence(pence):
@@ -64,7 +65,9 @@ def format_pence(pence):
     >>> format_pence(-120)
     '-£1.20'
     """
-    raise NotImplementedError
+    sign = "-" if pence < 0 else ""
+    pounds, pennies = divmod(abs(pence), 100)
+    return f"{sign}£{pounds}.{pennies:02d}"
 
 
 def parse_price_to_pence(value, unit):
@@ -75,7 +78,20 @@ def parse_price_to_pence(value, unit):
     Raise ValueError if the value is not a valid price (including fractions
     of a penny, e.g. "3.405" pounds or "340.5" pence).
     """
-    raise NotImplementedError
+    value = value.strip()
+    if unit == "pence":
+        if not value.isdigit():
+            raise ValueError(f"Invalid pence price: {value!r}")
+        return int(value)
+
+    # Decimal, not float: float("4.35") * 100 is 434.99999999999994
+    try:
+        pence = Decimal(value) * 100
+    except InvalidOperation:
+        raise ValueError(f"Invalid price: {value!r}") from None
+    if not pence.is_finite() or pence != pence.to_integral_value():
+        raise ValueError(f"Invalid price: {value!r}")
+    return int(pence)
 
 
 def parse_till_timestamp(value):
@@ -85,7 +101,11 @@ def parse_till_timestamp(value):
     ("2026-09-14T08:15:00"). Surrounding whitespace is ignored.
     Raise ValueError for anything else.
     """
-    raise NotImplementedError
+    value = value.strip()
+    try:
+        return datetime.strptime(value, "%d/%m/%Y %H:%M")
+    except ValueError:
+        return datetime.fromisoformat(value)
 
 
 def normalise_product_name(raw_name, products):
@@ -98,4 +118,15 @@ def normalise_product_name(raw_name, products):
     >>> normalise_product_name(" flat-white ", products)
     'Flat White'
     """
-    raise NotImplementedError
+    target = _match_key(raw_name)
+    if not target:
+        return None
+    for product in products:
+        names = [product["name"], *product["aliases"]]
+        if target in (_match_key(name) for name in names):
+            return product["name"]
+    return None
+
+
+def _match_key(name):
+    return " ".join(name.replace("-", " ").lower().split())
