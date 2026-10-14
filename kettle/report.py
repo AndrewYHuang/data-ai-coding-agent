@@ -13,8 +13,7 @@ def build_summary(rows, date):
         summary[b]["revenue"] += r["line_total_pence"]
 
     result = []
-    for b in summary:
-        s = summary[b]
+    for s in summary.values():
         result.append({
             "date": s["date"],
             "branch": s["branch"],

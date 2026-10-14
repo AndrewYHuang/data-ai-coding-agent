@@ -1,60 +1,72 @@
 from datetime import datetime
 from decimal import Decimal, InvalidOperation
 
+STANDARD_COLUMNS = ["transaction_id", "timestamp", "till_id", "product", "quantity", "unit_price"]
+DUBLIN_COLUMNS = ["timestamp", "product", "unit_price", "quantity", "till_id", "transaction_id"]
 
-def clean_rows(rows, branch, eur_rate=None):
+# How each branch's till lays out its CSV export. "price_unit" is passed to
+# parse_price_to_pence: "pounds" means prices like 3.40 (in the branch's
+# currency), "pence" means prices like 340.
+TILL_FORMATS = {
+    "leeds": {"columns": STANDARD_COLUMNS, "price_unit": "pounds", "currency": "GBP"},
+    "manchester": {"columns": STANDARD_COLUMNS, "price_unit": "pence", "currency": "GBP"},
+    "york": {"columns": STANDARD_COLUMNS, "price_unit": "pounds", "currency": "GBP"},
+    "dublin": {"columns": DUBLIN_COLUMNS, "price_unit": "pounds", "currency": "EUR"},
+}
+
+
+def clean_rows(rows, branch, products, eur_rate=None):
+    """Turn a branch's raw CSV rows into sales rows, in pence and catalogue names.
+
+    Blank lines and exact duplicate lines are dropped. Rows that can't be
+    parsed, or whose product isn't in the catalogue, are skipped with a warning.
+    """
+    till = TILL_FORMATS[branch]
     cleaned = []
     seen = set()
     for row in rows:
+        if not row or not row[0]:
+            continue
+
+        # The tills sometimes export the exact same line twice. Two different
+        # sales can share a minute and a product, so only an identical line
+        # counts as a duplicate.
+        key = tuple(row)
+        if key in seen:
+            continue
+        seen.add(key)
+
         try:
-            if len(row) == 0 or row[0] == "":
-                continue
-
-            # The tills sometimes export the exact same line twice. Two
-            # different sales can share a minute and a product, so only an
-            # identical line counts as a duplicate.
-            key = tuple(row)
-            if key in seen:
-                continue
-            seen.add(key)
-
-            if branch == "dublin":
-                txn_id, ts, till, product, qty, price = row[5], row[0], row[4], row[1], row[3], row[2]
-            else:
-                txn_id, ts, till, product, qty, price = row
-
-            if branch == "leeds" or branch == "york":
-                sold_at = datetime.strptime(ts.strip(), "%d/%m/%Y %H:%M")
-            else:
-                sold_at = datetime.fromisoformat(ts.strip())
-
-            # Negative quantities are refunds, so keep the sign
-            qty = int(qty)
-
-            if branch == "manchester":
-                price_pence = int(price)
-            else:
-                price_pence = int(round(float(price) * 100))
-
-            if branch == "dublin":
-                # The rate is euros per pound, so divide to go from euro cents to pence
-                price_pence = int(round(price_pence / eur_rate))
-
-            product = product.strip().title()
-
-            cleaned.append({
-                "transaction_id": txn_id,
-                "branch": branch,
-                "sold_at": sold_at.isoformat(),
-                "till_id": till,
-                "product": product,
-                "quantity": qty,
-                "unit_price_pence": price_pence,
-                "line_total_pence": qty * price_pence,
-            })
-        except:
-            pass
+            fields = dict(zip(till["columns"], row, strict=True))
+            cleaned.append(_clean_row(fields, branch, till, products, eur_rate))
+        except ValueError as error:
+            print(f"  skipping bad {branch} row {row}: {error}")
     return cleaned
+
+
+def _clean_row(fields, branch, till, products, eur_rate):
+    product = normalise_product_name(fields["product"], products)
+    if product is None:
+        raise ValueError(f"unknown product {fields['product']!r}")
+
+    price_pence = parse_price_to_pence(fields["unit_price"], till["price_unit"])
+    if till["currency"] == "EUR":
+        # The rate is euros per pound, so divide to go from euro cents to pence
+        price_pence = round(price_pence / eur_rate)
+
+    # Negative quantities are refunds, so keep the sign
+    quantity = int(fields["quantity"])
+
+    return {
+        "transaction_id": fields["transaction_id"],
+        "branch": branch,
+        "sold_at": parse_till_timestamp(fields["timestamp"]).isoformat(),
+        "till_id": fields["till_id"],
+        "product": product,
+        "quantity": quantity,
+        "unit_price_pence": price_pence,
+        "line_total_pence": quantity * price_pence,
+    }
 
 
 def clean_jsonl_transactions(transactions, branch, products):
@@ -83,10 +95,6 @@ def clean_jsonl_transactions(transactions, branch, products):
                 "line_total_pence": item["qty"] * item["price_pence"],
             })
     return cleaned
-
-
-# TODO(Andy): pull the parsing logic out of clean_rows into the helpers below so
-# it can be tested.
 
 
 def format_pence(pence):

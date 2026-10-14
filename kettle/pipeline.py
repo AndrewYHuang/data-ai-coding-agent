@@ -3,9 +3,9 @@ import os
 from kettle.extract import read_eur_rate, read_jsonl_till_export, read_products, read_till_export
 from kettle.load import load_sales
 from kettle.report import build_summary, write_summary
-from kettle.transform import clean_jsonl_transactions, clean_rows
+from kettle.transform import TILL_FORMATS, clean_jsonl_transactions, clean_rows
 
-BRANCHES = ["leeds", "manchester", "york", "dublin"]
+BRANCHES = list(TILL_FORMATS)
 
 # Branches whose tills export JSON Lines. They may not have opened yet on a
 # given date, so a missing file is skipped rather than treated as an error.
@@ -23,7 +23,7 @@ def run(date, data_dir="data", output_dir="output"):
         rate = None
         if branch == "dublin":
             rate = read_eur_rate(data_dir, date)
-        cleaned = clean_rows(rows, branch, rate)
+        cleaned = clean_rows(rows, branch, products, rate)
         print("  " + str(len(cleaned)) + " rows")
         all_rows = all_rows + cleaned
 
