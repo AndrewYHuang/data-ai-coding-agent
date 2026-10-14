@@ -18,6 +18,7 @@ result = subprocess.run(
     [sys.executable, "-m", "pytest", "-q", "-x", "--no-header"],
     capture_output=True,
     text=True,
+    check=False,
 )
 if result.returncode != 0:
     reason = "Tests are failing after this edit:\n\n" + result.stdout[-3000:]
