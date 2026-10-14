@@ -24,15 +24,14 @@ Try these, one at a time. Read each answer properly before moving on.
 4. `Which files in data/ does the pipeline actually read?`
 5. `How do I run the tests and the pipeline?`
 
-## 3. Fact-check someone else's agent
+## 3. Fact-check the handover note
 
-Before leaving, Andy asked an AI agent for an overview of the codebase, and saved its answer
-in [01-agent-overview.md](01-agent-overview.md). It reads well. It's confident. Andy's
-[handover note](../HANDOVER.md) is confident too. **Discernment** means checking.
+Before leaving, Andy got an AI agent to write most of the [handover note](../HANDOVER.md) and
+pasted it in unedited. It reads well. It's confident. **Discernment** means checking.
 
-Below are ten claims from the overview to check. For each one, fill in a row:
+Below are ten claims from the handover note to check. For each one, fill in a row:
 
-| # | What the overview says | What's actually true | Your evidence (`file:line`, or a row of data) |
+| # | What the handover note says | What's actually true | Your evidence (`file:line`, or a row of data) |
 |---|---|---|---|
 
 You can use your own Claude session to help you investigate, e.g. `Where is read_products
@@ -40,7 +39,7 @@ called?` or `Show me the code that converts Dublin's prices`. But **you** decide
 and every row needs evidence you've seen yourself in the code or the data. "The agent said
 so" doesn't count, whichever agent said it.
 
-**Some of these claims are wrong and some are right.** "The overview was right" is a valid
+**Some of these claims are wrong and some are right.** "The handover note was right" is a valid
 answer, as long as you have the evidence.
 
 1. **Which tills get processed?** Is there a file in `data/raw/tills/` that the pipeline never
@@ -50,7 +49,7 @@ answer, as long as you have the evidence.
 3. **Dublin's conversion.** Take one Dublin row and that day's rate from
    `data/raw/exchange_rates/`. Work out *by hand* the pence value the code produces. Is it
    more or less than the euro price? Should it be?
-4. **Negative quantities.** The overview, the code and the handover note all say they're till mistakes.
+4. **Negative quantities.** The handover note and the code comments both say they're till mistakes.
    Find a few in the data. What else is in those transactions? What do you think they are?
 5. **Duplicates.** What exactly does the code treat as "the same row"? Could two genuinely
    different sales match?
@@ -59,17 +58,17 @@ answer, as long as you have the evidence.
 7. **Bad rows.** They're "handled gracefully". What actually happens to a row with a quantity
    of `two`? How would anyone find out it had happened?
 8. **UK dates.** Is `01/02/2026` from the Leeds till read as 1st February or 2nd January?
-9. **Running it.** Would the overview's commands work on your machine, as it's set up for
-   this repo? Why not?
+9. **Running it.** Would the handover note's commands work on your machine, as it's set up
+   for this repo? Why not?
 10. **The 6am email.** Can you confirm from this repo that the summary is emailed every
-    morning? If not, where did the overview get it from?
+    morning? If not, what would you need to check?
 
 Compare your table with another learner's. Which claims were wrong? Which were *vague*, so
-that they sounded right without actually saying anything? Read the overview's final
-"Summary" paragraph again. Do you agree with it now?
+that they sounded right without actually saying anything? Read the "State of things" section
+again. Do you agree with it now?
 
-Finally, compare the overview with the answers *your* agent gave in section 2. Where did they
-disagree? Which one was right?
+Finally, compare the handover note with the answers *your* agent gave in section 2. Where did
+they disagree? Which one was right?
 
 ## 4. Find the smells
 
@@ -87,10 +86,10 @@ Did it flag anything that you think *isn't* actually a problem?
 
 - How long would it have taken you to understand this codebase without the agent?
 - How did you decide which of its claims to trust?
-- Several of the overview's mistakes match the handover note and the code comments. Where do
-  you think the agent that wrote it was getting its information from?
+- Some of the handover note's mistakes match the code comments word for word. Where do you
+  think the agent that wrote it was getting its information from?
 - For claim 10, the right answer is "I can't tell from this repo". Did your own agent say that
   when you asked? Why is that a good answer?
-- Andy pasted the overview in "unedited". What should Andy have done first?
+- Andy pasted the agent's write-up in unedited. What should Andy have done first?
 - There's a file of customer personal data in `data/raw/`. Did the agent read it while
   exploring? Would you know if it had? (We'll come back to this in exercise 04.)
