@@ -9,11 +9,15 @@
 Every night a Python job collects each branch's till export, cleans it up, loads it into a
 SQLite warehouse and writes a daily summary for the operations manager:
 
-```
-data/raw/tills/*.csv  ─┐
-                       ├─►  extract  ─►  transform  ─►  load (output/warehouse.db)
-data/raw/exchange_     │                             └─►  report (output/daily_summary_<date>.csv)
-  rates/*.json  ───────┘
+```mermaid
+flowchart LR
+    tills[/"data/raw/tills/*.csv"/] --> extract
+    rates[/"data/raw/exchange_rates/*.json"/] --> extract
+    extract --> transform
+    transform --> load
+    transform --> report
+    load --> db[("output/warehouse.db")]
+    report --> summary[/"output/daily_summary_YYYY-MM-DD.csv"/]
 ```
 
 The pipeline was written by **Dev**, a contractor who has now left. It runs. Nobody quite
