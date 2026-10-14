@@ -76,6 +76,17 @@ for Python. For this project it will:
 
 ### 1. Install uv
 
+First, check whether you already have it:
+
+```
+uv --version
+```
+
+If you see something like `uv 0.x.y`, uv is already installed. **Skip to
+[step 2](#2-clone-the-repo-and-install-everything).**
+
+If you get "command not found" / "not recognized", install it:
+
 **Windows (PowerShell):**
 
 ```powershell
