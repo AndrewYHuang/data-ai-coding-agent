@@ -37,13 +37,13 @@ def test_manchester_prices_are_already_pence():
     assert cleaned["line_total_pence"] == 700
 
 
-def test_dublin_columns_are_reordered_and_converted():
-    # BUG? see KC-101: €11.71 at 1.1712 EUR per GBP should be £10.00
+def test_dublin_columns_are_reordered_and_converted_to_pounds():
+    # KC-101: €11.71 at 1.1712 EUR per GBP is £10.00
     row = ["2026-09-14T08:00:00", "Flat White", "11.71", "1", "T1", "DUB-0914-0001"]
     [cleaned] = clean_rows([row], "dublin", eur_rate=1.1712)
     assert cleaned["transaction_id"] == "DUB-0914-0001"
     assert cleaned["product"] == "Flat White"
-    assert cleaned["unit_price_pence"] == 1371
+    assert cleaned["unit_price_pence"] == 1000
 
 
 def test_product_names_are_only_trimmed_and_title_cased():
