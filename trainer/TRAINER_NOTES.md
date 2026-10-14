@@ -26,9 +26,10 @@ which checks every branch and day against the Z-reports.
 
 ## Exercise 01: answer key
 
-Learners fact-check the ten claims in `exercises/01-agent-overview.md`.
+Learners fact-check ten claims in `HANDOVER.md`. In the story, Andy had an AI agent write
+most of it and pasted it in unedited.
 
-| # | Overview's claim | True? | Evidence |
+| # | Handover note's claim | True? | Evidence |
 |---|---|---|---|
 | 1 | Every till file is picked up | ✗ | `BRANCHES` is hard-coded in `kettle/pipeline.py`. `edinburgh_2026-09-16.jsonl` is never read. |
 | 2 | Every `unit_price` is in pounds | ✗ | Manchester's is in pence (`350`). `clean_rows` has a separate case for `manchester`. |
@@ -39,19 +40,23 @@ Learners fact-check the ten claims in `exercises/01-agent-overview.md`.
 | 7 | Bad rows are "handled gracefully" | Vague | A bare `except: pass` drops them with no trace. |
 | 8 | UK dates are read day first | ✓ | `strptime("%d/%m/%Y %H:%M")` |
 | 9 | Run with `pip` and `python -m` | ✗ | The repo uses uv (`uv run ...`), and plain `python` may not be installed. |
-| 10 | The summary is emailed at 6am | Can't verify | Nothing in the repo sends email. The claim comes only from `HANDOVER.md`. |
+| 10 | The summary is emailed at 6am | Can't verify | Nothing in the repo sends email, so learners can't confirm it from the repo. The right answer is "I'd have to check the server or ask the ops manager". |
 
-Where the overview's mistakes came from:
-- **Claims 1, 6, 9 and 10:** `HANDOVER.md`.
-- **Claims 3 and 4:** code comments (`# convert to GBP`, and "some tills export negative
-  numbers by mistake").
+Where the mistakes came from:
+- **Claims 3 and 4:** the code comments (`# convert to GBP`, and "some tills export negative
+  numbers by mistake"). The agent repeated what the comments say instead of what the code
+  does.
+- **Claim 6:** `read_products()` exists in `extract.py` but is never called. The agent saw
+  the function and assumed it was used.
+- **Claims 1, 9 and 10:** Andy's own beliefs, which the agent wrote up as fact.
 
-That's the discussion point: an agent repeats whatever confident sources it's given.
+That's the discussion point: an agent repeats whatever confident sources it's given, and it
+doesn't flag what it couldn't check.
 
-**Why it's a recorded answer, not a live trap.** We tested live agents (Sonnet and Opus) on
+**Why it's a recorded write-up, not a live trap.** We tested live agents (Sonnet and Opus) on
 the exercise questions, and they caught most of the traps by reading the code. A project skill
 that told the agent to "fall for" the traps was refused: the agent ignored it and told the
-learner about it. The recorded overview gives every learner the same mistakes to find.
+learner about it. A pre-written handover note gives every learner the same mistakes to find.
 
 ---
 
