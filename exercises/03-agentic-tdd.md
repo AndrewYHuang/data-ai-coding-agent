@@ -7,9 +7,7 @@ Work on a new branch: `exercise-03`.
 
 Use the loop from the presentation for each part: **Explore → Plan → Code → Commit**.
 
----
-
-## Part A: characterisation tests
+## 1. Characterisation tests
 
 Before changing code you don't understand, write tests that record **what it does today**.
 These are _characterisation tests_. They don't say the behaviour is right, but they warn you
@@ -28,9 +26,7 @@ when you change it by accident.
 > Characterisation tests are fine as a snapshot, but you should know which of them are
 > recording bugs. Mark those with a comment such as `# BUG? see KC-101`.
 
----
-
-## Part B: fix a bug (ticket KC-101)
+## 2. Fix a bug (ticket KC-101)
 
 Read [KC-101 in TICKETS.md](../TICKETS.md).
 
@@ -41,15 +37,13 @@ Read [KC-101 in TICKETS.md](../TICKETS.md).
    hand (e.g. one €11.71 item at a rate of 1.1712 should be £10.00). Run it and **see it
    fail**. If it passes, it isn't testing the bug.
 3. **Green:** ask for the smallest fix that makes it pass. Your characterisation test from
-   Part A should now fail too, so update it. That's exactly the warning it was there to give.
+   section 1 should now fail too, so update it. That's exactly the warning it was there to give.
 4. **Check:** run the pipeline for the 14th and compare Dublin with your hand calculation.
 5. Commit, mentioning `KC-101` in the message.
 
 Is Dublin now _exactly_ right? If not, why not? (See KC-102.)
 
----
-
-## Part C: add a feature (ticket KC-104)
+## 3. Add a feature (ticket KC-104)
 
 Read [KC-104](../TICKETS.md). Edinburgh's till exports JSON Lines and uses SKUs.
 
@@ -63,8 +57,6 @@ Read [KC-104](../TICKETS.md). Edinburgh's till exports JSON Lines and uses SKUs.
 4. **Check:** run the pipeline for the 14th (no Edinburgh file) and the 16th. Compare
    Edinburgh's figures with `data/raw/z_reports.csv`.
 5. Commit, mentioning `KC-104`.
-
----
 
 ## Stretch
 

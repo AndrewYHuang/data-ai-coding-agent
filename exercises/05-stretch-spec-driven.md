@@ -1,4 +1,4 @@
-# 05 (stretch): Spec-driven development
+# 05: Stretch: spec-driven development
 
 **Goal:** write down _what_ you want before the agent writes _how_, and use that spec to check
 its work.
