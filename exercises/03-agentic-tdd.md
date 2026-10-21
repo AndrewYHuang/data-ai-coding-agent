@@ -1,7 +1,7 @@
 # 03: Agentic TDD: characterise, fix, extend
 
 **Goal:** use test-driven development to keep an agent honest. Pin down what the code does
-now, then fix a bug, then add a feature, with a test written first every time.
+now, then fix a bug, and add a feature, with a test written first every time.
 
 Work on a new branch: `exercise-03`.
 
@@ -12,7 +12,7 @@ Use the loop from the presentation for each part: **Explore → Plan → Code �
 ## Part A: characterisation tests
 
 Before changing code you don't understand, write tests that record **what it does today**.
-These are *characterisation tests*. They don't say the behaviour is right, but they warn you
+These are _characterisation tests_. They don't say the behaviour is right, but they warn you
 when you change it by accident.
 
 1. Ask Claude to write characterisation tests for `clean_rows` and `build_summary`. Ask for
@@ -22,9 +22,9 @@ when you change it by accident.
    hand? If not, ask Claude to simplify it.
 3. Run them: `uv run pytest`. Commit.
 
-> **Watch out.** An agent writing tests against existing code will happily record *bugs* as
+> **Watch out.** An agent writing tests against existing code will happily record _bugs_ as
 > "expected behaviour". Look at the Dublin tests it wrote. Does the expected GBP value look
-> right to you? Look at the tests for a negative quantity. Is that what *should* happen?
+> right to you? Look at the tests for a negative quantity. Is that what _should_ happen?
 > Characterisation tests are fine as a snapshot, but you should know which of them are
 > recording bugs. Mark those with a comment such as `# BUG? see KC-101`.
 
@@ -35,7 +35,7 @@ when you change it by accident.
 Read [KC-101 in TICKETS.md](../TICKETS.md).
 
 1. **Explore:** ask Claude to investigate. Before it touches any code, work out for yourself
-   what Dublin's revenue *should* be on the 14th, using the Z-report and the exchange rate
+   what Dublin's revenue _should_ be on the 14th, using the Z-report and the exchange rate
    file. (A calculator is fine.)
 2. **Red:** ask for a failing test that shows the bug, using a tiny example you can check by
    hand (e.g. one €11.71 item at a rate of 1.1712 should be £10.00). Run it and **see it
@@ -45,7 +45,7 @@ Read [KC-101 in TICKETS.md](../TICKETS.md).
 4. **Check:** run the pipeline for the 14th and compare Dublin with your hand calculation.
 5. Commit, mentioning `KC-101` in the message.
 
-Is Dublin now *exactly* right? If not, why not? (See KC-102.)
+Is Dublin now _exactly_ right? If not, why not? (See KC-102.)
 
 ---
 
@@ -76,7 +76,7 @@ Read [KC-104](../TICKETS.md). Edinburgh's till exports JSON Lines and uses SKUs.
   catalogue?
 - Write a test that runs the whole pipeline and checks every branch against the Z-reports.
 
-## Discuss
+## Reflect
 
 - When did the agent write a test that was wrong? How did you catch it?
 - Did seeing the test fail first ever save you?

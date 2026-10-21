@@ -25,7 +25,7 @@ Create and switch to a new git branch called exercise-02
 ## 2. `format_pence`: manual mode
 
 In this repo, Claude Code starts in **manual** mode, where it asks before every edit and command.
-(That's set in `.claude/settings.json`. Elsewhere it may start in a different mode.)
+(That's set in `.claude/settings.json`. Elsewhere it defaults to **auto** mode.)
 
 ```
 Implement format_pence in kettle/transform.py so that its tests in tests/test_transform.py pass.
@@ -50,7 +50,7 @@ Implement parse_price_to_pence so its tests pass.
 ```
 
 Read the plan. Look at the test cases for `"4.35"` and `"0.29"`. Does the plan handle them?
-Try this in a Python shell (`uv run python`):
+Try the plan's suggestion in a Python shell (`uv run python`) - e.g.
 
 ```python
 >>> int(float("4.35") * 100)
@@ -64,7 +64,7 @@ plan, let it implement, run the tests and commit.
 Press **Shift+Tab** until you see **accept edits** mode. Claude will now edit files without
 asking each time.
 
-Do both functions. Then **review the diff before you commit**:
+Do both functions. Then **review the diff before you commit**. Either use the "diff" view in claude, your IDE, or try running:
 
 ```
 git diff
@@ -85,9 +85,8 @@ uv run pytest
 
 Everything should pass. Commit, and then compare notes with the person next to you.
 
-## Discuss
+## Reflect
 
 - Which permission mode did you prefer? When would you use each one?
 - Did the agent ever try to "fix" a failing test by changing the test? How would you know?
-- The four helpers exist now, but is `clean_rows` actually *using* any of them? Should it?
-  (Exercise 03 might be a good time.)
+- The four helpers exist now, but is `clean_rows` actually _using_ any of them? Should it?

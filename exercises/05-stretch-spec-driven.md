@@ -1,6 +1,6 @@
 # 05 (stretch): Spec-driven development
 
-**Goal:** write down *what* you want before the agent writes *how*, and use that spec to check
+**Goal:** write down _what_ you want before the agent writes _how_, and use that spec to check
 its work.
 
 In exercise 03 you went straight from the ticket to tests. With a larger feature, it pays to
@@ -38,7 +38,7 @@ Implement specs/product-summary.md using TDD. Write tests for each rule in the s
 Go through the spec line by line and find the test that covers each rule. Any rule
 without a test is a rule nobody checked.
 
-## Discuss
+## Reflect
 
 - Did writing the spec change what you asked for?
 - Where did the agent's questions surface something you hadn't thought about?

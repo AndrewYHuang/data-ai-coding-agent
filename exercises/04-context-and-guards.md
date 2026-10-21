@@ -1,7 +1,7 @@
 # 04: Context and guards
 
 **Goal:** give the agent the knowledge it can't work out from the code, and add rules that
-are enforced *every* time, not just when the agent remembers.
+are enforced _every_ time, not just when the agent remembers.
 
 Work on a new branch: `exercise-04`.
 
@@ -15,7 +15,7 @@ what a new team member would need to be told.
 1. Run `/init` inside Claude Code. It explores the repo and writes a first `CLAUDE.md`.
 2. **Review it like any other code.** Is it accurate? Is anything important missing? Is
    there anything you could delete because the agent could work it out from the code anyway?
-3. Add the things the code *can't* tell it. Some ideas:
+3. Add the things the code _can't_ tell it. Some ideas:
    - "Use `uv run` for all Python commands (`uv run pytest`, `uv run python ...`). Never `pip install`."
    - "UK till dates are day first (DD/MM/YYYY)."
    - "Money is held as integer pence, never floats."
@@ -30,7 +30,7 @@ Keep it short. Every line in `CLAUDE.md` takes up context in every session.
 
 ## Part B: a skill
 
-A **skill** is a set of instructions for a particular *kind* of task. Claude loads it only
+A **skill** is a set of instructions for a particular _kind_ of task. Claude loads it only
 when the task matches, so unlike `CLAUDE.md`, it doesn't cost context in every session.
 
 You've just added a new till format (Edinburgh). Kettle & Crumb will open more branches.
@@ -39,13 +39,13 @@ You've just added a new till format (Edinburgh). Kettle & Crumb will open more b
    what you learned in exercise 03 part C. It should describe the steps, which files to touch
    and which tests to write.
 2. Test it. Start a new session and say: `A Glasgow branch is opening with the same till as
-   Leeds. Add it.` Did Claude use the skill? Did it follow the steps?
+Leeds. Add it.` Did Claude use the skill? Did it follow the steps?
 
 ---
 
 ## Part C: deterministic guards
 
-`CLAUDE.md` is a *request*. The agent usually follows it, but not always. For rules that
+`CLAUDE.md` is a _request_. The agent usually follows it, but not always. For rules that
 must **never** be broken, use something that runs every time, whatever the agent "decides".
 
 ### Permissions: protect the raw data and personal data
@@ -57,10 +57,7 @@ The repo already has a `.claude/settings.json`, which makes Claude start in manu
 {
   "permissions": {
     "defaultMode": "manual",
-    "deny": [
-      "Edit(./data/raw/**)",
-      "Read(./data/raw/loyalty_members.csv)"
-    ]
+    "deny": ["Edit(./data/raw/**)", "Read(./data/raw/loyalty_members.csv)"]
   }
 }
 ```
@@ -74,8 +71,8 @@ Start a new session and **test the guard**:
 - `How many loyalty members are there in each branch?`
 
 What happens? Could the agent get round it some other way, e.g. by running a shell command
-that reads the file? What does that tell you about the difference between *permissions* and
-*sandboxing*?
+that reads the file? What does that tell you about the difference between _permissions_ and
+_sandboxing_?
 
 ### A hook: always run the tests
 
@@ -89,7 +86,7 @@ catches it.
 
 ---
 
-## Discuss
+## Reflect
 
 - Which rules belong in `CLAUDE.md`, which in a skill, and which in a guard?
 - Someone on your team says, "We don't need tests, we've told the agent to be careful in
