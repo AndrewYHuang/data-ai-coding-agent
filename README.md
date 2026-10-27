@@ -46,6 +46,32 @@ Open tickets from the business are in [TICKETS.md](TICKETS.md).
 
 You need **git**, **uv** and **Claude Code**.
 
+### Claude Code
+
+The instructions to install Claude Code are [here](https://code.claude.com/docs/en/quickstart).
+
+If you have been given an API key, set it before launching Claude Code by running:
+
+macOS/Linux:
+
+```bash
+export ANTHROPIC_API_KEY='your-api-key-here'
+```
+
+Windows CMD:
+
+```cmd
+set ANTHROPIC_API_KEY=your-api-key-here
+```
+
+Windows Powershell:
+
+```pwsh
+$env:ANTHROPIC_API_KEY="your-api-key-here"
+```
+
+### uv
+
 <details>
 <summary><strong>What is uv, and why are we using it?</strong></summary>
 
@@ -74,7 +100,7 @@ for Python. For this project it will:
 
 </details>
 
-### 1. Install uv
+#### 1. Install uv
 
 First, check whether you already have it:
 
@@ -128,7 +154,7 @@ instant. Run it again whenever `pyproject.toml` or `uv.lock` changes (e.g. after
 
 </details>
 
-### 3. Check it works
+#### 3. Check it works
 
 ```
 uv run pytest

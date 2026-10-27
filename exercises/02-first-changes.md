@@ -40,7 +40,44 @@ Commit this change with a sensible message
 
 Then check `git log` yourself. Is the commit message accurate?
 
-## 3. `parse_price_to_pence`: plan mode
+## 3. `parse_till_timestamp`: auto-accept edits
+
+Press **Shift+Tab** until you see **accept edits** mode. Claude will now edit files without
+asking each time.
+
+```
+Implement parse_till_timestamp so its tests pass.
+```
+
+Then **review the diff before you commit**. Either use the "diff" view in claude, your IDE, or try running:
+
+```
+git diff
+```
+
+You can't approve edits one by one any more, so reviewing the diff is how you stay
+accountable. Check:
+
+- Does `parse_till_timestamp("01/02/2026 09:00")` give **1st February**? (UK dates are day first.)
+- Did Claude change anything apart from that function?
+- Did it touch the tests?
+
+## 4. `normalise_product_name`: auto mode
+
+Press **Shift+Tab** until you see **auto** mode. Claude now edits files and runs commands
+without asking, and only stops for actions that look risky.
+
+```
+Implement normalise_product_name so its tests pass, then commit.
+```
+
+Nothing asked you for permission this time, so check afterwards with `git log` and `git show`:
+
+- What commands did it run? (Scroll back through the conversation.)
+- Did it change anything apart from that function? Did it touch the tests?
+- Is the commit message accurate?
+
+## 5. `parse_price_to_pence`: plan mode
 
 Press **Shift+Tab** until you see **plan mode**. In plan mode, Claude researches and proposes
 a plan, but can't change any files.
@@ -59,31 +96,13 @@ Try the plan's suggestion in a Python shell (`uv run python`) - e.g.
 If the plan has a problem, tell Claude before you approve it. When you're happy, approve the
 plan, let it implement, run the tests and commit.
 
-## 4. `parse_till_timestamp` and `normalise_product_name`: auto-accept edits
-
-Press **Shift+Tab** until you see **accept edits** mode. Claude will now edit files without
-asking each time.
-
-Do both functions. Then **review the diff before you commit**. Either use the "diff" view in claude, your IDE, or try running:
-
-```
-git diff
-```
-
-You can't approve edits one by one any more, so reviewing the diff is how you stay
-accountable. Check:
-
-- Does `parse_till_timestamp("01/02/2026 09:00")` give **1st February**? (UK dates are day first.)
-- Did Claude change anything apart from those two functions?
-- Did it touch the tests?
-
-## 5. Wrap up
+## 6. Wrap up
 
 ```
 uv run pytest
 ```
 
-Everything should pass. Commit, and then compare notes with the person next to you.
+Everything should pass.
 
 ## Reflect
 

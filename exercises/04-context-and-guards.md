@@ -47,9 +47,9 @@ job.
 2. **Review it like any other code.** For each line, ask: would the agent get this wrong
    without it? If not, delete it.
 3. Start a **new** Claude session (`/clear`) and ask the same question as in exercise 01:
-   `How do I run the tests?` Did the answer (or time to get the answer) change?
+   `How do I run the tests?` Did the answer change, and did the time or steps it takes to get the answer change?
 
-Keep it short. Every line in `AGENTS.md` takes up context in every session.
+Keep it concise. Every line in `AGENTS.md` takes up context in every session.
 
 ## 2. A skill
 

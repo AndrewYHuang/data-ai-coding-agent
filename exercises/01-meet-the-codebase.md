@@ -7,7 +7,7 @@ Make sure you've done the [setup](../README.md#setup) first, and that `uv run py
 
 ## 1. Start Claude Code
 
-From the repo's top-level folder:
+From the repo's top-level folder, in your terminal, run:
 
 ```sh
 claude
